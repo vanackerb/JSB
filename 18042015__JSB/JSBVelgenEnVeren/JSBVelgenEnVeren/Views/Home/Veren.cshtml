@@ -1,0 +1,39 @@
+﻿@model JSBVelgenEnVeren.Models.Veren
+
+@{
+    ViewBag.Title = "Veren";
+    List<SelectListItem> listAutoMerk = new List<SelectListItem>();
+    listAutoMerk.Add(new SelectListItem { Text = "Audi", Value = "Audi" });
+    listAutoMerk.Add(new SelectListItem { Text = "BMW", Value = "BMW" });
+
+    List<SelectListItem> listModel = new List<SelectListItem>();
+    listModel.Add(new SelectListItem { Text = "A4", Value = "A4" });
+
+    List<SelectListItem> listJaar = new List<SelectListItem>();
+    listJaar.Add(new SelectListItem { Text = "2000", Value = "2000" });
+
+    List<SelectListItem> listV_Diameter = new List<SelectListItem>();
+    listV_Diameter.Add(new SelectListItem { Text = "16", Value = "15" });
+
+}
+<h2 class="titles">Veren</h2><br />
+
+<fieldset>
+    <legend>Gegevens</legend>
+    <row>
+        <div class="col-md-4 hyperlinktext">
+            Gelieve een automerk te kiezen:<br /><br />
+            Gelieve een model aan te duiden:<br /><br />
+            Gelieve het jaar van uitvoering in te geven:<br /><br />           
+        </div>
+        <div class="col-md-4 hyperlinktext">
+            @Html.DropDownListFor(model => model.Merk, listAutoMerk, "--  merk -- ")<br /><br />
+            @Html.DropDownListFor(model => model.Merk, listModel, "--  model -- ")<br /><br />
+            @Html.DropDownListFor(model => model.Merk, listJaar, "--  jaar/uitvoering -- ")<br /><br />           
+        </div>
+        <div class="col-md-4 hyperlinktext">
+            <img src="~/Images/shock absorber2.jpg" />
+        </div>
+    </row>
+</fieldset>
+

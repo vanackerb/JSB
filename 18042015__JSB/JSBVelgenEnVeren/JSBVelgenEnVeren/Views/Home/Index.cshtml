@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@Styles.Render("~/Content/bootstrap.css")
+
+    <div class="row">
+        <h3><strong><abbr title="Compagnie">JSB Velgen en veren</abbr></strong></h3><br />
+        <p class="border">
+            <strong>AUTOBANDEN EN WINTERBANDEN ONLINE KOPEN BIJ JSB VELGEN EN VEREN.</strong><br />
+            Uw autobanden en winterbanden kunt u online kopen bij JSB Velgen en veren.
+            Via onze webshop kunt u ons assortiment autobanden, winterbanden, zomerbanden, 4 seizoenenbanden en nog veel meer bekijken en meteen afrekenen.<br /><br />
+
+            Naast banden verkoopt JSB Velgen en veren ook online lichtmetalen velgen.
+            Door middel van uw automerk of bandenmaat krijgt u een overzicht van passende velgen voor uw voertuig te zien waarna u ze direct kunt bestellen.<br /><br />
+
+            Tevens verkoopt JSB Velgen en veren ook online veren, passend voor elk voertuig.
+            JSB Velgen en veren geeft u betrouwbare service en gemak en heeft het grootste productaanbod op het gebied van banden, veren en velgen.<br /><br /><br /><br />
+        </p>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 hyperlinktext">
+            @Html.ActionLink("Button Veren", "Veren", null, new { @class = "veren" })
+
+            <h4>Ga verder naar onze veren</h4>
+        </div>
+        <div class="col-md-4 hyperlinktext">
+            @Html.ActionLink("Button Banden", "Tires", null, new { @class = "tires" })
+
+            <h4>Ga verder naar onze Banden</h4>
+        </div>
+        <div class="col-md-4 hyperlinktext">
+            @Html.ActionLink("Button Velgen", "Velgen", null, new { @class = "velgen" })
+
+
+            <h4>Ga verder naar onze velgen</h4>
+        </div>
+    </div>

@@ -1,0 +1,17 @@
+﻿@model IEnumerable<JSBVelgenEnVeren.Models.Category>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Model.Count() category:
+</p>
+<ul>
+    @foreach (var category in Model)
+    {
+        <li>@Html.ActionLink(category.Naam, "Browse", new { category = category.Naam })</li>
+    }
+</ul>

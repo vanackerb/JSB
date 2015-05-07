@@ -1,0 +1,144 @@
+﻿@model JSBVelgenEnVeren.Models.Banden
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Banden</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Naam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Naam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Merk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Merk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CategorieId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategorieId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prijs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prijs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Omschrijving)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Omschrijving)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Url)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Url)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BandenId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BandenId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hoogte)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hoogte)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Breedte)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Breedte)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LaadIndex)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LaadIndex)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Diameter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diameter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SnelheidsCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SnelheidsCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AutoId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AutoId)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

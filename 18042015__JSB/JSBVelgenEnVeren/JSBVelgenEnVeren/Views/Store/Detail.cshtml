@@ -1,0 +1,18 @@
+﻿@model JSBVelgenEnVeren.Models.Product
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>Detail</h2>
+
+<p>
+    <img src="~/Images/Velgen/@Model.Url" width="150" height="150" />@Model.Omschrijving<br />
+</p>
+<div>
+    
+    <p>
+        <em>Prijs:</em>
+        @Model.Prijs €
+    </p>
+       
+</div>

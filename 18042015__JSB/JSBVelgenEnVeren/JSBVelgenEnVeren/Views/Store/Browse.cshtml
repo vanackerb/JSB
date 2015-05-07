@@ -1,0 +1,26 @@
+﻿@model JSBVelgenEnVeren.Models.Category
+
+@{
+    ViewBag.Title = "Browse";
+}
+
+<h2>Browse</h2>
+
+<div>
+    <h3><em>@Model.Naam</em> Producten</h3>
+
+    <ul id="product-list">
+        @foreach (var product in Model.Products)
+        {
+            if (product.Unit > 0)
+            {
+                <li>
+                    <a href="@Url.Action("Detail", new { id = product.ProductId })">
+                        <img alt="@product.Naam" src="@product.Url" width="100px" height="75px" />
+                        <span>@product.Naam</span>
+                    </a>
+                </li>
+            }
+        }
+    </ul>
+</div>

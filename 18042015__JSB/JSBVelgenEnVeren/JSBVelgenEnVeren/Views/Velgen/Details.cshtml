@@ -1,0 +1,147 @@
+﻿@model JSBVelgenEnVeren.Models.Velgen
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div class="row">
+    <h4>Velgen</h4>
+    <hr />
+    <div class="col-md-6">
+        <dl class="dl-horizontal">
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Naam)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Naam)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Merk)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Merk)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Type)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Type)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CategorieId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CategorieId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Prijs)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Prijs)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Omschrijving)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Omschrijving)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Unit)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Unit)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Url)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Url)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.VelgId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.VelgId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Grootte)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Grootte)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Breedte)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Breedte)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Steekmaat)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Steekmaat)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Offset)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Offset)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Naafgat)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Naafgat)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.AutoId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AutoId)
+            </dd>
+
+        </dl>
+    </div>    
+    <div class="col-md-6">
+        <br />
+        <img src="~/Images/Velgen/@Model.Url" width="300" height="300" />
+
+    </div>
+
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

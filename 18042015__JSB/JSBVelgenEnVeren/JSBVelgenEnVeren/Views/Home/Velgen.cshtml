@@ -1,0 +1,51 @@
+﻿@model IEnumerable<JSBVelgenEnVeren.Models.Velgen>
+
+@{
+    ViewBag.Title = "Velgen";
+    List<SelectListItem> listAutoMerk = new List<SelectListItem>();
+    listAutoMerk.Add(new SelectListItem{Text = "Audi",Value = "Audi"});
+    listAutoMerk.Add(new SelectListItem { Text = "BMW", Value = "BMW" });
+
+    List<SelectListItem> listModel = new List<SelectListItem>();
+    listModel.Add(new SelectListItem { Text = "A4", Value = "A4" });
+
+    List<SelectListItem> listJaar = new List<SelectListItem>();
+    listJaar.Add(new SelectListItem { Text = "2000", Value = "2000" });
+
+    List<SelectListItem> listV_Diameter = new List<SelectListItem>();
+    listV_Diameter.Add(new SelectListItem { Text = "16", Value = "15" });
+    
+    }
+<h2 class="titles">Velgen</h2><br />
+
+    <fieldset class="row1">
+          @*  <div class="col-md-4 hyperlinktext">
+        @Html.DropDownListFor(model => , listAutoMerk, "--  merk -- ")
+        @Html.DropDownListFor(model => model.Merk, listModel, "--  model -- ")
+        @Html.DropDownListFor(model => model.Merk, listJaar, "--  jaar/uitvoering -- ")
+        @Html.DropDownListFor(model => model.Merk, listV_Diameter, "--  velgdiameter -- ")<br /><br />
+    </div>*@
+        
+            <div class="row">
+                
+                @foreach (var item in Model)
+                { 
+                            <div class="col-md-6">
+                                <br/>
+                                
+                                <div class="col-md-5">
+                                    <img src="~/Images/Velgen/@item.Url" width="150" height="150" /><br />
+                                </div>
+                                <div class="col-md-5"><br /><br /><br />
+                                    @Html.DisplayFor(model => item.Omschrijving)<br />
+                                    @Html.DisplayFor(model => item.Prijs) € excl. BTW
+
+                                    <p class="button">
+                                        @Html.ActionLink("Toevoegen aan winkelwagen", "AddToCart", "ShoppingCart", new { id = item.ProductId }, "")
+                                    </p>
+                                </div>
+                            </div>
+                }
+            </div>
+</fieldset>
+

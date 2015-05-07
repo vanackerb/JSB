@@ -1,0 +1,26 @@
+﻿@model JSBVelgenEnVeren.Models.AdminHome
+
+@{
+    ViewBag.Title = "Adminhome";
+}
+
+<h2 class="titles">Administrator</h2>
+<fieldset>
+    <legend></legend>
+    <row>
+        <div class="col-md-4 ">
+            <br />Vraag je factuur op klantnaam, besteld product,...<br /><br />
+            <br />Kijk na wat er in stock is, neem binnengekomen goederen in stock, etc...<br /><br />
+            Vraag gegevens op bv: welke producten meest verkocht, aantal producten verkocht per periode, etc...<br /><br />
+            <br />Hier kan je producten toevoegen, aanpassen,verwijderen...<br /><br />
+        </div>
+        <div class="col-md-4 ">
+            
+            <button class="buttonadmin" title="Facturatie" type="submit" >@Html.ActionLink("Facturatie", "Facturatie", "Home", new { @class = "facturatie" })</button><br /><br />
+            <button class="buttonadmin" title="Stock" type="submit">@Html.ActionLink("Stock", "Stock", "Home", new { @class = "stock" })</button><br /><br />
+            <button class="buttonadmin" title="Rapport" type="submit">@Html.ActionLink("Rapport", "Rapport", "Home", new { @class = "rapport" })</button><br /><br />
+            <button class="buttonadmin" title="SiteBeheer" type="submit">@Html.ActionLink("SiteBeheer", "SiteBeheer", "Home", new { @class = "sitebeheer" })</button>
+        </div>        
+    </row>
+</fieldset>
+

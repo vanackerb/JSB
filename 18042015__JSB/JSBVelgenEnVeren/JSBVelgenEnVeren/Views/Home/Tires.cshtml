@@ -1,0 +1,36 @@
+﻿@model IEnumerable<JSBVelgenEnVeren.Models.Banden>
+
+@{
+    ViewBag.Title = "Banden";
+
+}
+<h2 class="titles">Banden</h2><br />
+
+<fieldset>
+    <legend>Gegevens</legend>
+
+        <div class="row">
+
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6">
+                    <br />
+
+                    <div class="col-md-5">
+                        <img src="~/Images/Banden/@item.Url" width="150" height="150" /><br />
+                    </div>
+                    <div class="col-md-5">
+                        <br /><br /><br />
+                        @Html.DisplayFor(model => item.Omschrijving)<br />
+                        @Html.DisplayFor(model => item.Prijs) € excl. BTW
+
+                        <p class="button">
+                            @Html.ActionLink("Toevoegen aan winkelwagen", "AddToCart", "ShoppingCart", new { id = item.ProductId }, "")
+                        </p>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </row>
+</fieldset>
